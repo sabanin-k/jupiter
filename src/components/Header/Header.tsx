@@ -6,23 +6,22 @@ export const Header: FC = () => {
     return (
         <div className={styles.head}>
             <div className={styles.container}>
-                <div className={styles.top}>
+                <nav className={styles.top}>
                     <div className={styles.logo}>
                         <img src={logo} alt="logo" />
                     </div>
-                    <nav>
+                    <div>
                         <ul className={styles.list}>
                             <li>About</li>
                             <li>Services</li>
                             <li>Pricing</li>
                             <li>Blog</li>
                         </ul>
-                    </nav>
+                    </div>
                     <div>
                         <button className={styles.button}>Contact</button>
                     </div>
-                </div>
-            </div>
+                </nav>
             <header className={styles.header}>
                 <h1 className={styles.h1}>Portfolio</h1>
                 <p className={styles.p}>
@@ -30,6 +29,7 @@ export const Header: FC = () => {
                     technical skills, design, business understanding.
                 </p>
             </header>
+            </div>
         </div>
     )
 }

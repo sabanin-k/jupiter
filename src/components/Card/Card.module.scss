@@ -6,6 +6,16 @@
     position: relative;
 }
 
+.img {
+    max-width: 370px;
+    height: 416px;
+    border-radius: 8px;
+
+    @media (max-width: $mobile) {
+        width: 330px;
+    }
+}
+
 .category {
     margin: 0;
     padding: rem(4) rem(16) rem(0) rem(16);
@@ -16,6 +26,10 @@
     position: absolute;
     top: 256px;
     left: 48px;
+
+    @media (max-width: $mobile) {
+        left: 28px;
+    }
 }
 
 .name {
@@ -24,7 +38,11 @@
     line-height: rem(48);
     font-weight: 800;
     color: #fff;
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 320px;
     left: 48px;
+
+    @media (max-width: $mobile) {
+        left: 28px;
+    }
 }
