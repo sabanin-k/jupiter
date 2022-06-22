@@ -10,12 +10,20 @@
     max-width: 1175px;
     padding-top: rem(16);
     margin: 0 auto;
+
+    @media (max-width: $mobile) {
+        max-width: 375px;
+    }
 }
 
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
 }
 
 .list {
@@ -31,6 +39,10 @@
         padding: 0;
         color: #fff;
     }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .button {
@@ -44,6 +56,10 @@
     border: 1px solid rgba($color: #fff, $alpha: 0.29);
     border-radius: 6px;
     cursor: pointer;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .header {
@@ -58,8 +74,14 @@
 .h1 {
     margin: 0;
     font-size: rem(72);
+    line-height: rem(80);
     font-weight: 800;
     color: #fff;
+
+    @media (max-width: $mobile) {
+        font-size: rem(56);
+        line-height: rem(64);
+    }
 }
 
 .p {
@@ -70,4 +92,8 @@
     text-align: center;
     color: #fff;
     opacity: 0.64;
+
+    @media (max-width: $mobile) {
+        max-width: rem(330);
+    }
 }
