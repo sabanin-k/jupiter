@@ -1,9 +1,12 @@
 import { FC } from 'react'
-import styles from './Main.module.scss'
-import data from '../../data/cards.json'
 import { Card } from '../Card'
+import { useAppSelector } from '../../store/hooks'
+import { selectCards } from '../../store/reducers/cardSlice'
+import styles from './Main.module.scss'
 
 export const Main: FC = () => {
+    const cards = useAppSelector(selectCards)
+
     return (
         <main className={styles.main}>
             <div className={styles.container}>
@@ -17,7 +20,7 @@ export const Main: FC = () => {
                     </ul>
                 </div>
                 <div className={styles.cards}>
-                    {data.map(card => {
+                    {cards.map(card => {
                         return <Card
                             key={card.id}
                             name={card.name}
