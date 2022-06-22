@@ -18,7 +18,11 @@ export const Main: FC = () => {
                 </div>
                 <div className={styles.cards}>
                     {data.map(card => {
-                        return <Card key={card.id} src={card.image} />
+                        return <Card
+                            key={card.id}
+                            name={card.name}
+                            category={card.category}
+                            src={card.image} />
                     })}
                 </div>
             </div>

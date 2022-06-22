@@ -32,11 +32,16 @@
         padding: 0;
         color: $font-brown;
     }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .cards {
     margin-top: rem(75);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: rem(30)
 }
