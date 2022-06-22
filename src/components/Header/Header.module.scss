@@ -1,0 +1,73 @@
+@import "../../utils/colors.scss";
+@import "../../utils/mediaQueries.scss";
+@import "../../utils/pixelsToRem.scss";
+
+.head {
+    background-color: $bg-dark;
+}
+
+.container {
+    max-width: 1175px;
+    padding-top: rem(16);
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(32);
+    display: flex;
+    gap: rem(110);
+
+    &, li {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+}
+
+.button {
+    margin: 0;
+    padding: rem(18) rem(35);
+    font-weight: 900;
+    font-size: rem(14);
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid rgba($color: #fff, $alpha: 0.29);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(100);
+}
+
+.h1 {
+    margin: 0;
+    font-size: rem(72);
+    font-weight: 800;
+    color: #fff;
+}
+
+.p {
+    max-width: rem(570);
+    margin: 0;
+    margin-top: rem(50);
+    margin-bottom: rem(80);
+    text-align: center;
+    color: #fff;
+    opacity: 0.64;
+}
