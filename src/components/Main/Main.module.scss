@@ -1,0 +1,67 @@
+@import "../../utils/colors.scss";
+@import "../../utils/mediaQueries.scss";
+@import "../../utils/pixelsToRem.scss";
+
+.main {
+    background-color: $bg-light;
+    padding-bottom: rem(184);
+}
+
+.container {
+    max-width: 1175px;
+    padding-top: rem(16);
+    margin: 0 auto;
+
+    @media (max-width: $mobile) {
+        max-width: 375px;
+    }
+}
+
+.listWrapper {
+    margin-top: rem(85);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: rem(60);
+
+    &, li {
+        margin: 0;
+        padding: 0;
+        color: $font-brown;
+    }
+}
+
+.cards {
+    margin-top: rem(75);
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(30)
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 0;
+    margin-top: rem(80);
+    padding: rem(18) rem(43);
+    font-weight: 900;
+    font-size: rem(14);
+    color: $font-brown;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.25);
+    cursor: pointer;
+
+    &:active {
+        box-shadow: inset 0px 1px 4px rgba($color: #000000, $alpha: 0.25);
+        opacity: 0.7;
+    }
+}
