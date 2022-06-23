@@ -19,7 +19,7 @@
 }
 
 .listWrapper {
-    margin-top: rem(85);
+    margin-top: rem(75);
 }
 
 .list {
@@ -47,12 +47,25 @@
     cursor: pointer;
 }
 
+.selectWrapper {
+    display: none;
+
+    @media (max-width: $mobile) {
+        margin-top: rem(-60);
+        display: block;
+    }
+}
+
 .cards {
     margin-top: rem(75);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+
+    @media (max-width: $mobile) {
+        margin-top: rem(48);
+    }
 }
 
 .nothingCard {

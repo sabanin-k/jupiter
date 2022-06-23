@@ -1,0 +1,32 @@
+@import "../../utils/colors.scss";
+@import "../../utils/mediaQueries.scss";
+@import "../../utils/pixelsToRem.scss";
+
+.form {
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 5px 0 5px;
+        border-color: #ef6c58 transparent transparent transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        pointer-events: none;
+    }
+}
+
+.select {
+    width: 100%;
+    appearance: none;
+    outline: none;
+    border: 1px solid #f3d1bf;
+    border-radius: 8px;
+    padding: rem(17) rem(16) rem(14) rem(16);
+    color: $font-brown;
+    cursor: pointer;
+}

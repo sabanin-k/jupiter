@@ -1,7 +1,8 @@
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { loadMore, selectCategories, selectChoosenCategory, selectEditedCards, selectIsLoaded, setCategory, setChosenCards } from '../../store/reducers/cardSlice'
 import { Card } from '../Card'
+import { Select } from '../Select'
 import styles from './Main.module.scss'
 
 export const Main: FC = () => {
@@ -11,13 +12,13 @@ export const Main: FC = () => {
     const choosenCategory = useAppSelector(selectChoosenCategory)
     const isLoaded = useAppSelector(selectIsLoaded)
 
-    const handleSortCards = (value: string) => {
+    const handleSortCards = useCallback((value: string) => {
         dispatch(setCategory(value))
-    }
+    }, [dispatch])
 
-    const handleChoose = (id: number) => {
+    const handleChoose = useCallback((id: number) => {
         dispatch(setChosenCards(id))
-    }
+    }, [dispatch])
 
     const handleLoadMore = () => {
         dispatch(loadMore())
@@ -32,12 +33,19 @@ export const Main: FC = () => {
                             return (
                                 <li key={category}
                                     onClick={() => handleSortCards(category)}
-                                    className={category === choosenCategory ? styles.greenListItem : styles.listItem}
+                                    className={category === choosenCategory
+                                        ? styles.greenListItem
+                                        : styles.listItem}
                                 >
                                     {category}
                                 </li>)
                         })}
                     </ul>
+                </div>
+                <div className={styles.selectWrapper}>
+                    <Select categories={categories}
+                        handleSortCards={handleSortCards}
+                        choosenCategory={choosenCategory} />
                 </div>
                 <div className={styles.cards}>
                     {cards.length
