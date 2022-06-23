@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jupiter/static/css/main.60c8f5ff.css",
-    "main.js": "/jupiter/static/js/main.8a204b30.js",
+    "main.css": "/jupiter/static/css/main.f4cb2ffd.css",
+    "main.js": "/jupiter/static/js/main.d9fcc5fe.js",
     "index.html": "/jupiter/index.html",
-    "main.60c8f5ff.css.map": "/jupiter/static/css/main.60c8f5ff.css.map",
-    "main.8a204b30.js.map": "/jupiter/static/js/main.8a204b30.js.map"
+    "main.f4cb2ffd.css.map": "/jupiter/static/css/main.f4cb2ffd.css.map",
+    "main.d9fcc5fe.js.map": "/jupiter/static/js/main.d9fcc5fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.60c8f5ff.css",
-    "static/js/main.8a204b30.js"
+    "static/css/main.f4cb2ffd.css",
+    "static/js/main.d9fcc5fe.js"
   ]
 }
