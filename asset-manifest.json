@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jupiter/static/css/main.60c8f5ff.css",
+    "main.js": "/jupiter/static/js/main.8e247858.js",
+    "index.html": "/jupiter/index.html",
+    "main.60c8f5ff.css.map": "/jupiter/static/css/main.60c8f5ff.css.map",
+    "main.8e247858.js.map": "/jupiter/static/js/main.8e247858.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60c8f5ff.css",
+    "static/js/main.8e247858.js"
+  ]
+}
