@@ -1,7 +1,8 @@
 import { FC, useCallback, useEffect } from 'react';
-import { Home } from '../../pages/Home';
 import { useAppDispatch } from '../../store/hooks';
 import { removeCard } from '../../store/reducers/cardSlice';
+import { Header } from '../Header';
+import { Main } from '../Main';
 
 export const App: FC = () => {
     const dispatch = useAppDispatch()
@@ -17,6 +18,9 @@ export const App: FC = () => {
     }, [pressDel])
 
     return (
-        <Home />
+        <>
+            <Header />
+            <Main />
+        </>
     )
 }
