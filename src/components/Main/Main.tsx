@@ -48,21 +48,25 @@ export const Main: FC = () => {
                         choosenCategory={choosenCategory} />
                 </div>
                 <div className={styles.cards}>
-                    {cards.length
-                        ? cards.map(card => {
-                            return <Card
-                                key={card.id}
-                                id={card.id}
-                                name={card.name}
-                                category={card.category}
-                                src={card.image}
-                                handleSortCards={handleSortCards}
-                                handleChoose={handleChoose} />
-                        })
-                        : <div className={styles.nothingCard}>
-                            Nothing here
-                        </div>
-                    }
+                    <ul className={styles.cardsList}>
+                        {cards.length
+                            ? cards.map(card => {
+                                return (
+                                    <li key={card.id}>
+                                        <Card
+                                            id={card.id}
+                                            name={card.name}
+                                            category={card.category}
+                                            src={card.image}
+                                            handleSortCards={handleSortCards}
+                                            handleChoose={handleChoose} />
+                                    </li>)
+                            })
+                            : <div className={styles.nothingCard}>
+                                Nothing here
+                            </div>
+                        }
+                    </ul>
                 </div>
             </div>
             {!isLoaded && <div className={styles.buttonWrapper}>

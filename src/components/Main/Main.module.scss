@@ -51,6 +51,7 @@
     display: none;
 
     @media (max-width: $mobile) {
+        margin: 0;
         margin-top: rem(-60);
         display: block;
     }
@@ -58,13 +59,26 @@
 
 .cards {
     margin-top: rem(75);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
 
     @media (max-width: $mobile) {
         margin-top: rem(48);
+    }
+}
+
+.cardsList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 370px);
+    justify-content: center;
+    gap: 30px;
+
+    &, li {
+        padding: 0;
+    }
+
+    @media (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
     }
 }
 
