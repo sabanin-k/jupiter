@@ -8,7 +8,7 @@
 }
 
 .container {
-    max-width: 1175px;
+    max-width: 1300px;
     padding: rem(16) rem(50) 0 rem(50);
     margin: 0 auto;
 
@@ -28,10 +28,16 @@
     justify-content: center;
     gap: rem(60);
 
-    &, li {
+    & li {
         margin: 0;
         padding: 0;
         color: $font-brown;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     @media (max-width: $mobile) {
@@ -45,6 +51,18 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.nothingCard {
+    margin-top: rem(12);
+    height: 416px;
+    font-weight: 900;
+    font-size: rem(20);
+    color: $font-brown;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttonWrapper {

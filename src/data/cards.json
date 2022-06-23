@@ -1,54 +1,54 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "SOFA",
-        "category": "design",
+        "category": "Design",
         "image": "images/sofa.jpg"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "KeyBoard",
         "category": "Branding",
         "image": "images/keyboard.jpg"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Work Media",
         "category": "Illustration",
         "image": "images/work.jpg"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "DDDone",
         "category": "Motion",
         "image": "images/dddone.jpg"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "Abstract",
         "category": "Design",
         "image": "images/abstract.jpg"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "HandP",
         "category": "Branding",
         "image": "images/hand.jpg"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "Architect",
         "category": "Motion",
         "image": "images/architect.jpg"
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "CalC",
         "category": "Design",
         "image": "images/calc.jpg"
     },
     {
-        "id": "9",
+        "id": 9,
         "name": "Sport",
         "category": "Branding",
         "image": "images/sport.jpg"
