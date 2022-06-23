@@ -17,8 +17,15 @@ export const Card: FC<Props> = ({ id, name, category, src, handleSortCards, hand
 
     return (
         <div className={styles.card} onClick={() => handleChoose(id)} >
-            <img src={src} alt={name} className={chosenCard === id ? styles.outline : styles.img} />
-            <span className={styles.category} onClick={() => handleSortCards(category)}>{category}</span>
+            <img src={src} alt={name}
+                className={chosenCard === id ? styles.outline : styles.img} />
+            <span className={styles.category}
+                onClick={(e) => {
+                    e.stopPropagation()
+                    handleSortCards(category)
+                }}>
+                    {category}
+            </span>
             <p className={styles.name}>{name}</p>
         </div>
     )

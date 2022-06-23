@@ -29,9 +29,13 @@ export const Main: FC = () => {
                 <div className={styles.listWrapper}>
                     <ul className={styles.list}>
                         {categories.map(category => {
-                            return <li onClick={() => handleSortCards(category)}
-                                className={category === choosenCategory ? styles.greenListItem : styles.listItem}
-                                >{category}</li>
+                            return (
+                                <li key={category}
+                                    onClick={() => handleSortCards(category)}
+                                    className={category === choosenCategory ? styles.greenListItem : styles.listItem}
+                                >
+                                    {category}
+                                </li>)
                         })}
                     </ul>
                 </div>
