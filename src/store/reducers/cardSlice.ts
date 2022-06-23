@@ -15,18 +15,12 @@ const cardSlice = createSlice({
     initialState: {
         cards: data as Cards[],
         editedCards: data as Cards[],
+        categories: ['Show All', 'Design', 'Branding', 'Illustration', 'Motion'],
         chosenCard: null as number | null,
         choosenCategory: 'Show All',
         isLoaded: false
     },
     reducers: {
-        sortCards: (state, action: PayloadAction<string>) => {
-            if (action.payload === 'Show All') {
-                state.editedCards = state.cards
-            } else {
-                state.editedCards = state.cards.filter(card => card.category === action.payload)
-            }
-        },
         setChosenCards: (state, action: PayloadAction<number>) => {
             if (action.payload === state.chosenCard) {
                 state.chosenCard = null
@@ -34,8 +28,13 @@ const cardSlice = createSlice({
                 state.chosenCard = action.payload
             }
         },
-        setChoosenCategory: (state, action: PayloadAction<string>) => {
+        setCategory: (state, action: PayloadAction<string>) => {
             state.choosenCategory = action.payload
+            if (state.choosenCategory === 'Show All') {
+                state.editedCards = state.cards
+            } else {
+                state.editedCards = state.cards.filter(card => card.category === state.choosenCategory)
+            }
         },
         removeCard: (state) => {
             state.editedCards = state.editedCards.filter(card => card.id !== state.chosenCard)
@@ -44,21 +43,22 @@ const cardSlice = createSlice({
         loadMore: (state) => {
             state.cards = state.cards.concat(loadData)
             state.editedCards = state.cards
+            state.choosenCategory = 'Show All'
             state.isLoaded = true
         }
     }
 })
 
 export const selectCards = (state: RootState) => state.cardReducer.cards
+export const selectCategories = (state: RootState) => state.cardReducer.categories
 export const selectEditedCards = (state: RootState) => state.cardReducer.editedCards
 export const selectChosenCards = (state: RootState) => state.cardReducer.chosenCard
 export const selectChoosenCategory= (state: RootState) => state.cardReducer.choosenCategory
 export const selectIsLoaded = (state: RootState) => state.cardReducer.isLoaded
 
 export const {
-    sortCards,
     setChosenCards,
-    setChoosenCategory,
+    setCategory,
     removeCard,
     loadMore
 } = cardSlice.actions

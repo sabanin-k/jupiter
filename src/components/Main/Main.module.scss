@@ -28,21 +28,23 @@
     justify-content: center;
     gap: rem(60);
 
-    & li {
-        margin: 0;
-        padding: 0;
-        color: $font-brown;
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
     @media (max-width: $mobile) {
         display: none;
     }
+}
+
+.listItem {
+    margin: 0;
+    padding: 0;
+    color: $font-brown;
+    cursor: pointer;
+}
+
+.greenListItem {
+    margin: 0;
+    padding: 0;
+    color: $font-green;
+    cursor: pointer;
 }
 
 .cards {
