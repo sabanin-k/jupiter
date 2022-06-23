@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { loadMore, selectEditedCards, setChosenCards, sortCards } from '../../store/reducers/cardSlice'
+import { loadMore, selectEditedCards, selectIsLoaded, setChosenCards, sortCards } from '../../store/reducers/cardSlice'
 import { Card } from '../Card'
 import styles from './Main.module.scss'
 
 export const Main: FC = () => {
     const dispatch = useAppDispatch()
     const cards = useAppSelector(selectEditedCards)
+    const isLoaded = useAppSelector(selectIsLoaded)
 
     const handleSortCards = (value: string) => {
         dispatch(sortCards(value))
@@ -50,9 +51,9 @@ export const Main: FC = () => {
                     }
                 </div>
             </div>
-            <div className={styles.buttonWrapper}>
+            {!isLoaded && <div className={styles.buttonWrapper}>
                 <button onClick={handleLoadMore} className={styles.button}>Load more</button>
-            </div>
+            </div>}
         </main>
     )
 }
