@@ -17,10 +17,16 @@
     }
 }
 
-.top {
+.navList {
+    margin: 0;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &, li {
+        padding: 0;
+    }
 
     @media (max-width: $mobile) {
         justify-content: center;
